@@ -1,16 +1,49 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --headerImage: url(../images/cover-image-light.png);
+  --headerStuffColor: #FF8DCB;
+  --headerColorHover: #35343040;
+
+  --headerTitleColor: #FFC2E6;
+  --headerSubtitleColor: #FFF1F7;
+
+  --pageBackgroundColor: #FFF1F7;
+  --pageTextColor: #353430;
+
+  --themeBorderColor: #353430;
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .header__subtitle {
+  color: var(--pageTextColor);
+}
+
+.theme-light .main__title {
+  color: var(--pageTextColor);
+}
+
+.theme-light .main__subtitle {
+  color: var(--pageTextColor);
+}
+
+.theme-light .header__theme-menu-button {
+  color: var(--themeBorderColor);
+}
+
+.theme-light .header__theme-menu-button:hover {
+  border: 1px solid var(--headerColorHover);
+}
+
+.theme-light .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--themeBorderColor);
+}
+
+.theme-light .header__theme-menu-button_type_light {
+  border: 1px solid var(--themeBorderColor);
+}
+
+.theme-dark .header__theme-menu-button_type_dark {
+  border: 1px solid var(--themeBorderColor);
+}
+
+.theme-light .header__theme-rec {
+  display: none;
 }

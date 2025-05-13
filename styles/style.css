@@ -4,10 +4,30 @@
   margin-inline: 0px;
   margin-block: 0px;
   background-color: var(--pageBackgroundColor);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 2px 2px 0 var(--headerStuffColor);
+  border: none;
+  outline: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  border-radius: 0%;
+  outline: 1px solid var(--pageTextColor);
+  outline-offset: 2px;
 }
 
 .header {
-  min-height: 768px;
+  min-height: 100vh;
   background-image: var(--headerImage);
   background-size: cover;
   background-position-x: center;
@@ -20,7 +40,7 @@
 .header__theme-border::before, .header__theme-border::after {
   content: '';
   display: block;
-  border: 1px solid var(--headerStuffColor);
+  border: 1px solid var(--themeBorderColor);
   width: 20px;
   height: 20px;
   position: absolute;
@@ -74,6 +94,8 @@
   padding-block-start: 20px;
   font-family: IBM Plex Mono;
   text-align: center;
+  flex-direction: row;
+  padding: 0;
 }
 
 .header__theme-menu-list {
@@ -84,6 +106,7 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  padding: 20px 0 0 0;
 }
 
 .header__theme-menu-button {
@@ -114,13 +137,13 @@
 }
 
 .header__theme-menu-button_type_dark {
-  border: 1px solid var(--headerStuffColor);
+  border: 1px solid var(--themeBorderColor);
 }
 
 .header__title {
   font-family: IBM Plex Mono;
   font-weight: 700;
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 83%;
   letter-spacing: 0%;
   color: var(--headerTitleColor);
@@ -157,6 +180,10 @@
   display: grid;
 }
 
+.main__section:last-child {
+  margin: 0;
+}
+
 .main__title {
   font-weight: 700;
   color: var(--headerStuffColor);
@@ -183,9 +210,9 @@
 }
 
 .main__section_1 {
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 20px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 236px 2fr;
   grid-template-rows: 1fr 1fr;
 }
 
@@ -208,13 +235,17 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, auto);
   grid-row-gap: 20px;
-  grid-column-gap: 15px;
+  grid-column-gap: 20px;
 }
 
 
 .main__section_3 .main__title {
   grid-column: 1/2;
   grid-row: 1/-1;
+}
+
+.main__subtitle_thin {
+  font-weight: 400;
 }
 
 .main__sectionGallery {
@@ -231,8 +262,8 @@
     "sun sun ice"
     "vid book ice"
     "vid street street";
-  grid-auto-flow: row;
-  grid-gap: 20px;
+    grid-auto-flow: row;
+    grid-gap: 20px;
 }
 
 .main__sectionGalleryImage {
@@ -261,4 +292,183 @@
 
 .main__sectionGalleryImage_street {
   grid-area: street; 
+}
+
+.main__titleGallery {
+  color: var(--headerSubtitleColor);
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin: 60px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.footer__title {
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  letter-spacing: 0%;
+  color: var(--headerTitleColor);
+  text-shadow: 2px 2px 0 var(--headerStuffColor);
+  margin: 0;
+  align-content: center;
+}
+
+.footer__theme-border::before, .footer__theme-border::after {
+  content: '';
+  display: block;
+  border: 1px solid var(--themeBorderColor);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 0;
+}
+
+.footer__theme-border::before {
+  border-right-color: transparent;
+  border-top-color: transparent;
+  left: 20px;
+  bottom: 20px;
+}
+
+.footer__theme-border::after {
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  right: 20px;
+  top: 20px;
+}
+
+@media (width <= 768px) {
+  .header__theme-menu {
+    flex-direction: column;
+    justify-content: end;
+    padding:  0 20px 26px 0;
+  }
+
+  .header__theme-menu-list{
+    flex-direction: column;
+    align-self: end;
+  }
+
+  .header__subtitle {
+    margin: 15px 20px 0 0;
+  }
+
+  .main__section_2 {
+    /* grid-template-columns: 1fr; Через грид он просто коллапсит блоки с текстом в одну строку..
+    grid-template-rows: repeat(auto-fill, auto); */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__section_2 .main__title {
+    inline-size: 236px;
+  }
+}
+
+@media (width <= 500px) {
+  .header__theme-border::before {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .header__theme-border::after {
+    right: 10px;
+    top: 10px;
+  }
+
+  .header__theme-rec {
+    block-size: 0;
+    right: 19px;
+    font-size: 18px;
+    line-height: 5px;
+  } 
+
+  .header__theme-menu {
+    padding: 0 10px 35px 0;
+  }
+  
+  .header__title {
+    letter-spacing: -2%;
+    inline-size: calc(100vw - 20px);
+    margin: 0 auto 0;
+  }
+
+  .header {
+    row-gap: 20px;
+  }
+
+  .header__subtitle {
+    inline-size: calc(100vw - 20px);
+    margin: 25px auto 0;
+  }
+
+  .main {
+    margin: 60px 10px 0;
+  }
+
+  .main__section {
+    margin: 0 0 50px 0;
+  }
+
+  .main__section_1 {
+    column-gap: 0px;
+    row-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  } 
+
+  .main__section_3 {
+    column-gap: 0px;
+    row-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  } 
+
+  .main__section_3 .main__title{
+    grid-row: 1/2;
+  }
+
+  .main__sectionGalleryImages {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sun"
+      "ice"
+      "vid"
+      "book"
+      "street";
+      grid-auto-flow: row;
+      grid-gap: 20px;
+  }
+
+  .footer {
+    margin: 40px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .footer__theme-border::before {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .footer__theme-border::after {
+    right: 10px;
+    top: 10px;
+  }
 }
