@@ -1,3 +1,3 @@
 # Проект "Посмотри в окно"
 
-проектная работа второго спринта https://github.com/DEXNV/posmotri-v-okno-fd
+проектная работа третьего спринта https://github.com/DEXNV/slozhno-sosredotochitsya-fd
