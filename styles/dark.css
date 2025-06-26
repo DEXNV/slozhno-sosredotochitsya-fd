@@ -1,10 +1,11 @@
 :root.theme-dark {
-  --headerImage: url(../images/cover-image-dark.png);
+  --bodyBackGroundImage: url(../images/cover-image-dark.png);
   --headerStuffColor: #FF0070;
   --headerColorHover: #FF007040;
 
   --headerTitleColor: #DB00FF;
   --headerSubtitleColor: #000028;
+  --headerSubtitleAltColor: #000028;
 
   --pageBackgroundColor: #000028;
   --pageTextColor: #F1B2CE;
@@ -26,8 +27,9 @@
 
 .theme-dark .header__theme-menu-button_type_dark {
   border: 1px solid var(--themeBorderColor);
+  pointer-events: none;
 }
 
-.theme-light .header__theme-menu-button_type_dark {
+.theme-light .header__theme-menu-button_type_light {
   border: none;
 }

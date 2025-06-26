@@ -1,10 +1,11 @@
 :root.theme-light {
-  --headerImage: url(../images/cover-image-light.png);
+  --bodyBackGroundImage: url(../images/cover-image-light.png);
   --headerStuffColor: #FF8DCB;
   --headerColorHover: #35343040;
 
   --headerTitleColor: #FFC2E6;
   --headerSubtitleColor: #FFF1F7;
+  --headerSubtitleAltColor: #353430;
 
   --pageBackgroundColor: #FFF1F7;
   --pageTextColor: #353430;
@@ -38,10 +39,11 @@
 
 .theme-light .header__theme-menu-button_type_light {
   border: 1px solid var(--themeBorderColor);
+  pointer-events: none;
 }
 
-.theme-dark .header__theme-menu-button_type_dark {
-  border: 1px solid var(--themeBorderColor);
+.theme-light .header__theme-menu-button_type_dark {
+  border: none;
 }
 
 .theme-light .header__theme-rec {

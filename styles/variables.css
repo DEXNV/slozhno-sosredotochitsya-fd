@@ -1,13 +1,95 @@
-:root {
-  --headerImage: url(../images/cover-image-dark.png);
-  --headerStuffColor: #FF0070;
-  --headerColorHover: #FF007040;
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --bodyBackGroundImage: url(../images/cover-image-light.png);
+    --headerStuffColor: #FF8DCB;
+    --headerColorHover: #35343040;
 
-  --headerTitleColor: #DB00FF;
-  --headerSubtitleColor: #000028;
+    --headerTitleColor: #FFC2E6;
+    --headerSubtitleColor: #FFF1F7;
+    --headerSubtitleAltColor: #353430;
 
-  --pageBackgroundColor: #000028;
-  --pageTextColor: #F1B2CE;
+    --pageBackgroundColor: #FFF1F7;
+    --pageTextColor: #353430;
 
-  --themeBorderColor: #FF0070;
+    --themeBorderColor: #353430;
+  }
+
+  .theme-auto .header__subtitle {
+    color: var(--pageTextColor);
+  }
+
+  .theme-auto .main__title {
+    color: var(--pageTextColor);
+  }
+
+  .theme-auto .main__subtitle {
+    color: var(--pageTextColor);
+  }
+
+  .theme-auto .header__theme-menu-button {
+    color: var(--themeBorderColor);
+  }
+
+  .theme-auto .header__theme-menu-button:hover {
+    border: 1px solid var(--headerColorHover);
+  }
+
+  .theme-auto .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--themeBorderColor);
+  }
+
+  .theme-autot .header__theme-menu-button_type_light {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_dark {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_auto {
+    border: 1px solid var(--themeBorderColor);
+    pointer-events: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --bodyBackGroundImage: url(../images/cover-image-dark.png);
+    --headerStuffColor: #FF0070;
+    --headerColorHover: #FF007040;
+
+    --headerTitleColor: #DB00FF;
+    --headerSubtitleColor: #000028;
+    --headerSubtitleAltColor: #000028;
+
+    --pageBackgroundColor: #000028;
+    --pageTextColor: #F1B2CE;
+
+    --themeBorderColor: #FF0070;
+  }
+
+  .theme-auto .header__subtitle {
+    color: var(--headerSubtitleColor);
+  }
+
+  .theme-auto .main__title {
+    color: var(--headerStuffColor);
+  }
+
+  .theme-auto .main__subtitle {
+    color: var(--headerSubtitleColor);
+  }
+
+  .theme-auto .header__theme-menu-button_type_light {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_dark {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_auto {
+    border: 1px solid var(--themeBorderColor);
+    pointer-events: none;
+  }
 }
