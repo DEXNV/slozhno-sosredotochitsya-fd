@@ -33,3 +33,7 @@
 .theme-light .header__theme-menu-button_type_light {
   border: none;
 }
+
+.theme-rec {
+  display: block;
+}

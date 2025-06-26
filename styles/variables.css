@@ -50,6 +50,10 @@
     border: 1px solid var(--themeBorderColor);
     pointer-events: none;
   }
+
+  .theme-auto .theme-rec {
+    display: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,5 +95,9 @@
   .theme-auto .header__theme-menu-button_type_auto {
     border: 1px solid var(--themeBorderColor);
     pointer-events: none;
+  }
+
+  .theme-auto .theme-rec {
+    display: block;
   }
 }
