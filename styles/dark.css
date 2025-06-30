@@ -37,3 +37,50 @@
 .theme-rec {
   display: block;
 }
+
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --bodyBackGroundImage: url(../images/cover-image-dark.png);
+    --headerStuffColor: #FF0070;
+    --headerColorHover: #FF007040;
+
+    --headerTitleColor: #DB00FF;
+    --headerSubtitleColor: #000028;
+    --headerSubtitleAltColor: #000028;
+
+    --pageBackgroundColor: #000028;
+    --pageTextColor: #F1B2CE;
+
+    --themeBorderColor: #FF0070;
+  }
+
+  .theme-auto .header__subtitle {
+    color: var(--headerSubtitleColor);
+  }
+
+  .theme-auto .main__title {
+    color: var(--headerStuffColor);
+  }
+
+  .theme-auto .main__subtitle {
+    color: var(--headerSubtitleColor);
+  }
+
+  .theme-auto .header__theme-menu-button_type_light {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_dark {
+    border: none;
+  }
+
+  .theme-auto .header__theme-menu-button_type_auto {
+    border: 1px solid var(--themeBorderColor);
+    pointer-events: none;
+  }
+
+  .theme-auto .theme-rec {
+    display: block;
+  }
+}

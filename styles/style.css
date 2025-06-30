@@ -6,6 +6,7 @@
   max-width: 1200px;
   margin: 0 auto;
   background-image: var(--bodyBackGroundImage);
+  background-color: var(--pageBackgroundColor);
   background-attachment: fixed;
   background-size: cover;
   background-position-x: center; 
