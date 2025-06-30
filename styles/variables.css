@@ -27,7 +27,6 @@
 
 .header__theme-menu-button_type_dark {
   border: 1px solid var(--themeBorderColor);
-  pointer-events: none;
 }
 
 .header__theme-menu-button_type_light {
