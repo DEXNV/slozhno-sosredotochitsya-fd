@@ -17,17 +17,16 @@ a {
   color: inherit;
   text-shadow: 2px 2px 0 var(--headerStuffColor);
   border: none;
-  outline: none;
+  outline-offset: 2px;
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--pageTextColor);
 }
 
 a:focus {
   border-radius: 0%;
   outline: 1px solid var(--pageTextColor);
-  outline-offset: 2px;
 }
 
 .header {
@@ -68,8 +67,8 @@ a:focus {
   text-transform: uppercase;
   block-size: 26px;
   position: absolute;
-  top: 22px;
-  right: 32px;
+  top: 20px;
+  right: 33px;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 18px;
@@ -83,11 +82,11 @@ a:focus {
   block-size: 5px;
   inline-size: 5px;
   display: inline-block;
-  box-shadow: 0px 0px 3px 3px var(--headerStuffColor);
+  box-shadow: 0px 0px 2.5px 2.5px var(--headerStuffColor);
   border-radius: 50%;
   background-color: var(--headerStuffColor);
   margin-inline-start: 10px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .header__theme-menu {
@@ -136,10 +135,6 @@ a:focus {
 
 .header__theme-menu-button:focus {
   border-bottom: 1px solid var(--headerStuffColor);
-}
-
-.header__theme-menu-button_type_dark {
-  border: 1px solid var(--themeBorderColor);
 }
 
 .header__title {
@@ -372,14 +367,27 @@ h2.main__title.main__title-gallery {
   }
 
   .theme-rec {
-    block-size: 0;
-    right: 19px;
+    right: 24px;
     font-size: 18px;
-    line-height: 5px;
+    top: 10px;
   } 
 
+  .theme-rec::after {
+    margin-inline-end: -2px;
+  }
+
   .theme-menu {
-    padding: 0 10px 35px 0;
+    position: relative;
+    padding: 0 0 35px 0;
+  }
+
+  .header__theme-menu-list {
+    margin: 0 0 19px 0;
+    gap: 10px;
+  }
+
+  .header__theme-menu {
+    padding: 0 10px 20px 0;
   }
   
   .header__title {
@@ -394,7 +402,8 @@ h2.main__title.main__title-gallery {
 
   .header__subtitle {
     inline-size: calc(100vw - 20px);
-    margin: 25px auto 0;
+    margin: 27px auto 0;
+    line-height: 23.5px;
   }
 
   .main {

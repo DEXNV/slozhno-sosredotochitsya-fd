@@ -25,14 +25,22 @@
   color: var(--headerSubtitleColor);
 }
 
-.header__theme-menu-button_type_dark {
-  border: 1px solid var(--themeBorderColor);
+.theme-rec {
+  display: block;
 }
 
-.header__theme-menu-button_type_light {
+.theme-auto .header__theme-menu-button:hover {
+  border: 1px solid var(--headerColorHover);
+}
+
+.theme-auto .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--themeBorderColor);
+}
+
+.theme-auto .header__theme-menu-button_type_light {
   border: none;
 }
 
-.theme-rec {
-  display: block;
+.theme-auto .header__theme-menu-button_type_dark {
+  border: none;
 }
