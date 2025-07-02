@@ -82,7 +82,7 @@ a:focus {
   block-size: 5px;
   inline-size: 5px;
   display: inline-block;
-  box-shadow: 0px 0px 2.5px 2.5px var(--headerStuffColor);
+  box-shadow: 0 0 4px 2px var(--headerStuffColor);
   border-radius: 50%;
   background-color: var(--headerStuffColor);
   margin-inline-start: 10px;
